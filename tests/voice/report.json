@@ -1,3 +1,11 @@
 {
- "error": "ELEVENLABS_API_KEY secret is missing"
+ "subscription_http": [
+  401,
+  "{\"detail\":{\"type\":\"authentication_error\",\"code\":\"unauthorized\",\"message\":\"The API key you used is missing the permission user_read to execute this operation.\",\"status\":\"missing_permissions\",\"request_id\":\"43088fb8237037504570c016fa955976\"}}"
+ ],
+ "models": [],
+ "model_used": "eleven_multilingual_v2",
+ "my_voices": [],
+ "library_matches": [],
+ "error": "voice not found"
 }
