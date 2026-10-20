@@ -43,7 +43,7 @@ async def edge(text, out):
 
 def main(ep):
     out = f"{ep}/voice.mp3"
-    if os.path.exists(out):
+    if os.path.exists(out) and os.path.getsize(out) > 1000:
         print("voice: already exists"); return
     text = open(f"{ep}/script.txt", encoding="utf-8").read().strip()
     err = eleven(text, out)
