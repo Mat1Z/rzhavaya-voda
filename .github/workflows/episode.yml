@@ -58,7 +58,7 @@ jobs:
           rm -rf "$EP/seg" "$EP/video_raw.mp4" "$EP"/*.wav
           if [ "$DRY_IMAGES" = "1" ]; then
             rm -rf "$EP/img" "$EP/shots.json"
-            for f in "$EP"/*.mp4; do [ -f "$f" ] && mv "$f" "$EP/dry-run.mp4"; done
+            for f in "$EP"/*.mp4; do [ "$(basename "$f")" != "dry-run.mp4" ] && mv -f "$f" "$EP/dry-run.mp4"; done; true
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
