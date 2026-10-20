@@ -9,6 +9,7 @@ from PIL import Image
 ACC = os.environ["CF_ACCOUNT_ID"].strip()
 TOK = os.environ["CF_API_TOKEN"].strip()
 BASE = f"https://api.cloudflare.com/client/v4/accounts/{ACC}/ai/run/"
+SUFFIX = os.environ.get("OUT_SUFFIX", "")
 H = {"Authorization": f"Bearer {TOK}"}
 
 STYLE = ("Stylized low-poly 3D render, blocky characters with pixel-art textures, "
@@ -33,12 +34,15 @@ def refs_for(prompt):
         files.append("refs/mira.png")
     if "Nurlan" in prompt:
         files.append("refs/nurlan.png")
-    files.append("refs/style.png")
+    if os.environ.get("USE_STYLE_REF") == "1":
+        files.append("refs/style.png")
     return files[:4]
 
 def ref_text(paths):
     names = {"refs/mira.png": "the girl in image {i}", "refs/nurlan.png": "the man in image {i}",
              "refs/style.png": "the art style of image {i}"}
+    if not paths:
+        return ""
     parts = [names[p].format(i=i) for i, p in enumerate(paths)]
     return "Use " + ", ".join(parts) + ". "
 
@@ -60,7 +64,7 @@ def run_klein(model, name, prompt, report):
 def run_schnell(name, prompt, report):
     t = time.time()
     r = requests.post(BASE + "@cf/black-forest-labs/flux-1-schnell", headers=H,
-                      json={"prompt": STYLE + prompt, "steps": 8, "seed": 7}, timeout=180)
+                      json={"prompt": STYLE + prompt, "steps": 8}, timeout=180)
     dt = round(time.time() - t, 1)
     return finish(r, "flux-1-schnell", name, dt, report)
 
@@ -70,7 +74,7 @@ def finish(r, model, name, dt, report):
         j = r.json()
         img = (j.get("result") or {}).get("image")
         if img:
-            entry["size"] = save_b64(img, f"tests/flux/{model}/{name}.jpg")
+            entry["size"] = save_b64(img, f"tests/flux/{model}{SUFFIX}/{name}.jpg")
             entry["ok"] = True
         else:
             entry["ok"] = False
@@ -91,7 +95,7 @@ def main():
             else:
                 run_klein(m, name, prompt, report)
     os.makedirs("tests/flux", exist_ok=True)
-    json.dump(report, open("tests/flux/report.json", "w"), ensure_ascii=False, indent=1)
+    json.dump(report, open(f"tests/flux/report{SUFFIX}.json", "w"), ensure_ascii=False, indent=1)
     ok = sum(e["ok"] for e in report)
     print(f"done: {ok}/{len(report)} ok")
     if ok == 0:
