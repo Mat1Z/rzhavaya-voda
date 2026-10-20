@@ -39,13 +39,21 @@ def main():
     model = next((m for m in ids if "v4" in m), None) or ("eleven_v3" if "eleven_v3" in ids else "eleven_multilingual_v2")
     report["model_used"] = model
 
-    voices = requests.get(f"{API}/voices", headers=H, timeout=30).json().get("voices", [])
+    if not models.ok:
+        report["models_http"] = [models.status_code, models.text[:200]]
+    vr = requests.get(f"{API}/voices", headers=H, timeout=30)
+    if not vr.ok:
+        report["voices_http"] = [vr.status_code, vr.text[:200]]
+    voices = vr.json().get("voices", []) if vr.ok else []
     report["my_voices"] = [v["name"] for v in voices]
     voice = next((v for v in voices if VOICE_NAME.lower() in v["name"].lower()), None)
 
     if not voice:
-        sh = requests.get(f"{API}/shared-voices", headers=H, timeout=30,
-                          params={"search": VOICE_NAME, "language": "ru", "page_size": 10}).json()
+        shr = requests.get(f"{API}/shared-voices", headers=H, timeout=30,
+                           params={"search": VOICE_NAME, "language": "ru", "page_size": 10})
+        if not shr.ok:
+            report["library_http"] = [shr.status_code, shr.text[:200]]
+        sh = shr.json() if shr.ok else {}
         cands = sh.get("voices", [])
         report["library_matches"] = [c.get("name") for c in cands]
         if not cands:
