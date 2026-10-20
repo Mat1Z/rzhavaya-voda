@@ -1,11 +1,23 @@
 {
  "subscription_http": [
   401,
-  "{\"detail\":{\"type\":\"authentication_error\",\"code\":\"unauthorized\",\"message\":\"The API key you used is missing the permission user_read to execute this operation.\",\"status\":\"missing_permissions\",\"request_id\":\"43088fb8237037504570c016fa955976\"}}"
+  "{\"detail\":{\"type\":\"authentication_error\",\"code\":\"unauthorized\",\"message\":\"The API key you used is missing the permission user_read to execute this operation.\",\"status\":\"missing_permissions\",\"request_id\":\"29d26161cde48b27bcb1e59a0a405240\"}}"
  ],
  "models": [],
  "model_used": "eleven_multilingual_v2",
+ "models_http": [
+  401,
+  "{\"detail\":{\"type\":\"authentication_error\",\"code\":\"unauthorized\",\"message\":\"The API key you used is missing the permission models_read to execute this operation.\",\"status\":\"missing_permissions\",\"request"
+ ],
+ "voices_http": [
+  401,
+  "{\"detail\":{\"type\":\"authentication_error\",\"code\":\"unauthorized\",\"message\":\"The API key you used is missing the permission voices_read to execute this operation.\",\"status\":\"missing_permissions\",\"request"
+ ],
  "my_voices": [],
+ "library_http": [
+  401,
+  "{\"detail\":{\"type\":\"authentication_error\",\"code\":\"unauthorized\",\"message\":\"The API key you used is missing the permission voices_read to execute this operation.\",\"status\":\"missing_permissions\",\"request"
+ ],
  "library_matches": [],
  "error": "voice not found"
 }
