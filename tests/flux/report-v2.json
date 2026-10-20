@@ -1,0 +1,197 @@
+[
+ {
+  "model": "flux-2-klein-4b",
+  "shot": "01_window",
+  "seconds": 18.3,
+  "http": 200,
+  "size": [
+   768,
+   1360
+  ],
+  "ok": true
+ },
+ {
+  "model": "flux-2-klein-9b",
+  "shot": "01_window",
+  "seconds": 3.2,
+  "http": 200,
+  "size": [
+   768,
+   1360
+  ],
+  "ok": true
+ },
+ {
+  "model": "flux-1-schnell",
+  "shot": "01_window",
+  "seconds": 2.2,
+  "http": 200,
+  "size": [
+   1024,
+   1024
+  ],
+  "ok": true
+ },
+ {
+  "model": "flux-2-klein-4b",
+  "shot": "02_towel",
+  "seconds": 10.6,
+  "http": 200,
+  "size": [
+   768,
+   1360
+  ],
+  "ok": true
+ },
+ {
+  "model": "flux-2-klein-9b",
+  "shot": "02_towel",
+  "seconds": 1.8,
+  "http": 200,
+  "size": [
+   768,
+   1360
+  ],
+  "ok": true
+ },
+ {
+  "model": "flux-1-schnell",
+  "shot": "02_towel",
+  "seconds": 2.3,
+  "http": 200,
+  "size": [
+   1024,
+   1024
+  ],
+  "ok": true
+ },
+ {
+  "model": "flux-2-klein-4b",
+  "shot": "03_street",
+  "seconds": 16.2,
+  "http": 200,
+  "size": [
+   768,
+   1360
+  ],
+  "ok": true
+ },
+ {
+  "model": "flux-2-klein-9b",
+  "shot": "03_street",
+  "seconds": 1.6,
+  "http": 200,
+  "size": [
+   768,
+   1360
+  ],
+  "ok": true
+ },
+ {
+  "model": "flux-1-schnell",
+  "shot": "03_street",
+  "seconds": 2.7,
+  "http": 200,
+  "size": [
+   1024,
+   1024
+  ],
+  "ok": true
+ },
+ {
+  "model": "flux-2-klein-4b",
+  "shot": "04_tape",
+  "seconds": 17.4,
+  "http": 200,
+  "size": [
+   768,
+   1360
+  ],
+  "ok": true
+ },
+ {
+  "model": "flux-2-klein-9b",
+  "shot": "04_tape",
+  "seconds": 2.4,
+  "http": 200,
+  "size": [
+   768,
+   1360
+  ],
+  "ok": true
+ },
+ {
+  "model": "flux-1-schnell",
+  "shot": "04_tape",
+  "seconds": 2.4,
+  "http": 200,
+  "size": [
+   1024,
+   1024
+  ],
+  "ok": true
+ },
+ {
+  "model": "flux-2-klein-4b",
+  "shot": "05_drop",
+  "seconds": 17.4,
+  "http": 200,
+  "size": [
+   768,
+   1360
+  ],
+  "ok": true
+ },
+ {
+  "model": "flux-2-klein-9b",
+  "shot": "05_drop",
+  "seconds": 1.8,
+  "http": 200,
+  "size": [
+   768,
+   1360
+  ],
+  "ok": true
+ },
+ {
+  "model": "flux-1-schnell",
+  "shot": "05_drop",
+  "seconds": 2.3,
+  "http": 200,
+  "size": [
+   1024,
+   1024
+  ],
+  "ok": true
+ },
+ {
+  "model": "flux-2-klein-4b",
+  "shot": "06_hallway",
+  "seconds": 14.5,
+  "http": 200,
+  "size": [
+   768,
+   1360
+  ],
+  "ok": true
+ },
+ {
+  "model": "flux-2-klein-9b",
+  "shot": "06_hallway",
+  "seconds": 0.3,
+  "http": 429,
+  "ok": false,
+  "error": "[{\"message\": \"AiError: AiError: Capacity temporarily exceeded, please try again. (081aa60b-4424-4775-90c6-baf631d8b199)\", \"code\": 3040}]"
+ },
+ {
+  "model": "flux-1-schnell",
+  "shot": "06_hallway",
+  "seconds": 2.4,
+  "http": 200,
+  "size": [
+   1024,
+   1024
+  ],
+  "ok": true
+ }
+]
