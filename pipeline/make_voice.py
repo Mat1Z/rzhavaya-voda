@@ -37,7 +37,7 @@ def eleven(text, out):
 
 async def edge(text, out):
     import edge_tts
-    await edge_tts.Communicate(text, "ru-RU-DmitryNeural", rate="-8%", pitch="-6Hz").save(out)
+    await edge_tts.Communicate(text, "ru-RU-DmitryNeural", rate="+4%", pitch="-4Hz").save(out)
     print("voice: Edge TTS ru-RU-DmitryNeural (запасной голос)")
 
 
