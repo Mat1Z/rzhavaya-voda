@@ -1,0 +1,182 @@
+[
+ {
+  "model": "flux-2-klein-4b",
+  "shot": "01_window",
+  "seconds": 7.8,
+  "http": 200,
+  "size": [
+   768,
+   1360
+  ],
+  "ok": true
+ },
+ {
+  "model": "flux-2-klein-9b",
+  "shot": "01_window",
+  "seconds": 3.0,
+  "http": 200,
+  "size": [
+   768,
+   1360
+  ],
+  "ok": true
+ },
+ {
+  "model": "flux-1-schnell",
+  "shot": "01_window",
+  "seconds": 0.1,
+  "http": 400,
+  "ok": false,
+  "error": "[{\"message\": \"AiError: Bad input: Error: Additional or unevaluated properties '/seed' at '/' not allowed (ef745707-7691-42e5-b69e-45c0923333cc)\", \"code\": 5006}]"
+ },
+ {
+  "model": "flux-2-klein-4b",
+  "shot": "02_towel",
+  "seconds": 15.7,
+  "http": 200,
+  "size": [
+   768,
+   1360
+  ],
+  "ok": true
+ },
+ {
+  "model": "flux-2-klein-9b",
+  "shot": "02_towel",
+  "seconds": 2.4,
+  "http": 200,
+  "size": [
+   768,
+   1360
+  ],
+  "ok": true
+ },
+ {
+  "model": "flux-1-schnell",
+  "shot": "02_towel",
+  "seconds": 0.1,
+  "http": 400,
+  "ok": false,
+  "error": "[{\"message\": \"AiError: Bad input: Error: Additional or unevaluated properties '/seed' at '/' not allowed (dd4f1c3d-af1c-45a9-909e-8424314dc7ec)\", \"code\": 5006}]"
+ },
+ {
+  "model": "flux-2-klein-4b",
+  "shot": "03_street",
+  "seconds": 7.1,
+  "http": 200,
+  "size": [
+   768,
+   1360
+  ],
+  "ok": true
+ },
+ {
+  "model": "flux-2-klein-9b",
+  "shot": "03_street",
+  "seconds": 2.6,
+  "http": 200,
+  "size": [
+   768,
+   1360
+  ],
+  "ok": true
+ },
+ {
+  "model": "flux-1-schnell",
+  "shot": "03_street",
+  "seconds": 0.1,
+  "http": 400,
+  "ok": false,
+  "error": "[{\"message\": \"AiError: Bad input: Error: Additional or unevaluated properties '/seed' at '/' not allowed (28b98158-df75-4558-ba21-daec8ff3b262)\", \"code\": 5006}]"
+ },
+ {
+  "model": "flux-2-klein-4b",
+  "shot": "04_tape",
+  "seconds": 10.1,
+  "http": 200,
+  "size": [
+   768,
+   1360
+  ],
+  "ok": true
+ },
+ {
+  "model": "flux-2-klein-9b",
+  "shot": "04_tape",
+  "seconds": 2.6,
+  "http": 200,
+  "size": [
+   768,
+   1360
+  ],
+  "ok": true
+ },
+ {
+  "model": "flux-1-schnell",
+  "shot": "04_tape",
+  "seconds": 0.1,
+  "http": 400,
+  "ok": false,
+  "error": "[{\"message\": \"AiError: Bad input: Error: Additional or unevaluated properties '/seed' at '/' not allowed (78a986c3-92fe-4783-a266-2ccefaaf73f4)\", \"code\": 5006}]"
+ },
+ {
+  "model": "flux-2-klein-4b",
+  "shot": "05_drop",
+  "seconds": 6.7,
+  "http": 200,
+  "size": [
+   768,
+   1360
+  ],
+  "ok": true
+ },
+ {
+  "model": "flux-2-klein-9b",
+  "shot": "05_drop",
+  "seconds": 2.0,
+  "http": 200,
+  "size": [
+   768,
+   1360
+  ],
+  "ok": true
+ },
+ {
+  "model": "flux-1-schnell",
+  "shot": "05_drop",
+  "seconds": 0.1,
+  "http": 400,
+  "ok": false,
+  "error": "[{\"message\": \"AiError: Bad input: Error: Additional or unevaluated properties '/seed' at '/' not allowed (ae0303a8-b4b0-44c0-8325-3027f3da31a5)\", \"code\": 5006}]"
+ },
+ {
+  "model": "flux-2-klein-4b",
+  "shot": "06_hallway",
+  "seconds": 6.2,
+  "http": 200,
+  "size": [
+   768,
+   1360
+  ],
+  "ok": true
+ },
+ {
+  "model": "flux-2-klein-9b",
+  "shot": "06_hallway",
+  "seconds": 3.4,
+  "http": 200,
+  "size": [
+   768,
+   1360
+  ],
+  "ok": true
+ },
+ {
+  "model": "flux-1-schnell",
+  "shot": "06_hallway",
+  "seconds": 0.1,
+  "http": 400,
+  "ok": false,
+  "error": "[{\"message\": \"AiError: Bad input: Error: Additional or unevaluated properties '/seed' at '/' not allowed (58434f8a-72d0-46ff-92fc-6e07094e85d9)\", \"code\": 5006}]"
+ }
+]
