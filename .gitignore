@@ -1,0 +1,3 @@
+episodes/*/seg/
+episodes/*/video_raw.mp4
+episodes/*/*.wav

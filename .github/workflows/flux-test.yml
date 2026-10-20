@@ -2,8 +2,6 @@ name: FLUX image test
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "20 0 21 10 *"   # once, right after the Cloudflare daily limit resets (05:20 Almaty, 21 Oct)
 
 permissions:
   contents: write

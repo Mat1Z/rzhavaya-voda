@@ -1,0 +1,62 @@
+name: Build episode (cloud)
+
+on:
+  workflow_dispatch:
+    inputs:
+      episode:
+        description: "Episode folder, e.g. episodes/03"
+        default: "episodes/03"
+  push:
+    paths:
+      - "pipeline/**"
+      - "episodes/*/episode.json"
+      - "episodes/*/script.txt"
+      - ".github/workflows/episode.yml"
+  schedule:
+    - cron: "20 0 21 10 *"   # once: 05:20 Almaty on 21 Oct, right after the Cloudflare daily limit resets
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      EP: ${{ inputs.episode || 'episodes/03' }}
+      DRY_IMAGES: ${{ github.event_name == 'push' && '1' || '0' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install tools
+        run: |
+          sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg fontconfig
+          mkdir -p ~/.fonts && cp fonts/*.otf ~/.fonts/ && fc-cache -f
+          pip install -q requests pillow edge-tts
+      - name: Voice
+        env:
+          ELEVENLABS_API_KEY: ${{ secrets.ELEVENLABS_API_KEY }}
+          ELEVEN_VOICE_ID: ${{ vars.ELEVEN_VOICE_ID }}
+        run: python pipeline/make_voice.py "$EP"
+      - name: Images
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+        run: python pipeline/make_images.py "$EP"
+      - name: Montage
+        run: python pipeline/build.py "$EP"
+      - name: Save results
+        if: always()
+        run: |
+          rm -rf "$EP/seg" "$EP/video_raw.mp4" "$EP"/*.wav
+          if [ "$DRY_IMAGES" = "1" ]; then
+            rm -rf "$EP/img" "$EP/shots.json"
+            for f in "$EP"/*.mp4; do [ -f "$f" ] && mv "$f" "$EP/dry-run.mp4"; done
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A "$EP" || true
+          git commit -m "Cloud build: $EP [skip ci]" || echo "nothing to commit"
+          git pull --rebase -q && git push
