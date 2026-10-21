@@ -1,20 +1,53 @@
 voice: already exists
-01: flux-2-klein-9b failed: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (7e9cda65-
-02: flux-2-klein-9b failed: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (86f25d87-
-03: flux-2-klein-9b failed: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (b1ea2244-
-04: flux-2-klein-9b failed: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (78ec4d11-
-05: flux-2-klein-9b failed: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (920f3523-
-06: flux-2-klein-9b failed: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (f0b09143-
-07: flux-2-klein-9b failed: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (a3f49377-
-08: flux-2-klein-9b failed: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (5f422965-
-09: flux-2-klein-9b failed: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (f3c71f89-
-10: flux-2-klein-9b failed: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (922e034f-
-11: flux-2-klein-9b failed: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (2f113eed-
-12: flux-2-klein-9b failed: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (671c3db0-
-13: flux-2-klein-9b failed: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (327c0666-
-14: flux-2-klein-9b failed: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (073f576a-
-15: flux-2-klein-9b failed: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (2ce472de-
-16: flux-2-klein-9b failed: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (9fc17916-
-17: flux-2-klein-9b failed: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (85929bcb-
-18: flux-2-klein-9b failed: {"errors":[{"message":"AiError: AiError: you have used up your daily free allocation of 10,000 neurons, please upgrade to Cloudflare's Workers Paid plan if you would like to continue usage. (30966c09-
-Не получились кадры: 01, 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14, 15, 16, 17, 18
+01: ok (flux-2-klein-9b)
+02: ok (flux-2-klein-9b)
+03: ok (flux-2-klein-9b)
+04: ok (flux-2-klein-9b)
+06: ok (flux-2-klein-9b)
+07: ok (flux-2-klein-9b)
+08: ok (flux-2-klein-9b)
+09: ok (flux-2-klein-9b)
+10: ok (flux-2-klein-9b)
+11: ok (flux-2-klein-9b)
+13: ok (flux-2-klein-9b)
+14: ok (flux-2-klein-9b)
+15: ok (flux-2-klein-9b)
+16: ok (flux-2-klein-9b)
+17: ok (flux-2-klein-9b)
+18: ok (flux-2-klein-9b)
+alignment cost 0.26 (меньше 3 — хорошо)
+('i', 'img/01.jpg', 0.0, 2.68, 'in')
+('i', 'img/02.jpg', 2.68, 4.9, 'in2')
+('i', 'img/03.jpg', 4.9, 8.14, 'shake')
+('i', 'img/04.jpg', 8.14, 16.43, 'in')
+('i', 'img/06.jpg', 16.43, 18.54, 'in')
+('i', 'img/07.jpg', 18.54, 21.5, 'left')
+('i', 'img/08.jpg', 21.5, 25.48, 'in')
+('i', 'img/09.jpg', 25.48, 27.25, 'in2')
+('i', 'img/10.jpg', 27.25, 30.46, 'in')
+('i', 'img/11.jpg', 30.46, 33.6, 'out')
+('i', 'img/13.jpg', 33.6, 36.45, 'in2')
+('i', 'img/14.jpg', 36.45, 43.59, 'in2')
+('i', 'img/15.jpg', 43.59, 46.39, 'in')
+('i', 'img/16.jpg', 46.39, 50.47, 'in')
+('i', 'img/17.jpg', 50.47, 57.72, 'out')
+('i', 'img/18.jpg', 57.72, 64.51, 'in2')
+('b', None, 64.51, 67.51, None)
+кадр 1/17 2.7с
+кадр 2/17 2.2с
+кадр 3/17 3.2с
+кадр 4/17 8.3с
+кадр 5/17 2.1с
+кадр 6/17 3.0с
+кадр 7/17 4.0с
+кадр 8/17 1.8с
+кадр 9/17 3.2с
+кадр 10/17 3.1с
+кадр 11/17 2.9с
+кадр 12/17 7.1с
+кадр 13/17 2.8с
+кадр 14/17 4.1с
+кадр 15/17 7.2с
+кадр 16/17 6.8с
+кадр 17/17 3.0с
+ГОТОВО: episodes/03/Ржавая вода — часть 3 (облако).mp4 — 67.5 с, 18.1 МБ
