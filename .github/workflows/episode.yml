@@ -11,6 +11,7 @@ on:
       - "pipeline/**"
       - "episodes/*/episode.json"
       - "episodes/*/script.txt"
+      - "episodes/*/trigger.txt"
       - ".github/workflows/episode.yml"
   schedule:
     - cron: "20 0 21 10 *"   # once: 05:20 Almaty on 21 Oct, right after the Cloudflare daily limit resets
