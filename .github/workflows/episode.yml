@@ -27,7 +27,7 @@ jobs:
         shell: bash
     env:
       EP: ${{ inputs.episode || 'episodes/03' }}
-      DRY_IMAGES: ${{ github.event_name == 'push' && '1' || '0' }}
+      DRY_IMAGES: ${{ github.event_name == 'push' && !contains(github.event.head_commit.message, '[real]') && '1' || '0' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
